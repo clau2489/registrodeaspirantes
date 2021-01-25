@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #e6e6e6;
+}
+.navbar-light .navbar-brand {
+    color: rgb(230 229 229 / 90%);
+}
+.bg-grey {
+    background-color: #9e9e9e63;
+    padding: 1em;
+}
+.fa {
+    font-size: 12px;
+}
+.botn {
+    padding-left: 8px;
+    padding-top: 2px;
+    padding-right: 8px;
+    padding-bottom: 2px;
+}
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: white;
+    border-radius: .3rem;
+}
+.jp {
+    font-size: 24px;
+    font-weight: 700;
+}
+.text-white {
+    color: #fff!important;
+    font-size: 13px;
+    font-family: inherit;
+    font-weight: unset;
+}
+.copyright {
+    font-size: small;
+    text-align: center;   
+}
+
+.footer {
+    font-size: small;
+    text-align: center;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+.form-login {
+    padding: 20px;
+    border-radius: 1em;
+    text-align: center;
+}
+.form-row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+    margin-top: 10px;
+}
+.jump {
+    background-color: #efefef;
+    padding: 1em;
+    border-style: solid;
+    border-color: #e8e8e8;
+}
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    font-size: smaller;
+}
+tr {
+    font-size: 10px;
+}
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-y: scroll;
+}
+.bg-table {
+    background-color: #737272;
+}
+a {
+    color: #1fb525;
+    font-weight: 100;
+    text-decoration: none;
+    background-color: transparent;
+}
+.tareas {
+    background-color: whitesmoke;
+    height: 700px;
+    width: 100%;
+}
+.btn-small{
+    font-size: 10px;
+}
+.formulario {
+    background-color: #dadada;
+    padding: 1em;
+    border-radius: 9px;
+}
+.bg-light {
+    background-color: #f8f9fa!important;
+    border-radius: 9px;
+}
+
+.form-inline .form-control {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+}
+.bg-dark {
+    background-color: #bfbfbf!important;
+}
+#table {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+td {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #167552;
+    font-weight: 700;
+}
+    
+.color-admin{
+    color: #167552;
+}
+.tarjeta {
+    background-color: white;
+    padding: 1em;
+    border-radius: 10px;
+}

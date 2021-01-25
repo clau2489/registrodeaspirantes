@@ -1,0 +1,2 @@
+Usuario: planvivienda
+Contraseña: CUBDBOUI
