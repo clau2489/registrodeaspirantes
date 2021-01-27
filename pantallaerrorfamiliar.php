@@ -29,7 +29,7 @@
           </div>
           <div class="offset-md-3 col-md-6">
             <div class="alert alert-secondary" role="alert">
-              <p> Para más información, comuníquese con nuestras oficinas de atención de Lunes a Viernes de 9:00 a 15:00hs - Tel: 0220-477-1015 </p>
+              <p> Para más información, comuníquese con nuestras oficinas de atención de Lunes a Viernes de 9:00 a 15:00hs - Tel: 0220-477-1015 Int. 261</p>
               <hr>
               <p class="mb-0 text-center">Muchas Gracias</p>
             </div>

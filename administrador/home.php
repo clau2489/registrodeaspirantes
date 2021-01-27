@@ -43,33 +43,59 @@ if (empty($_SESSION["usuario"])) {
 
     <div class="row mt-2">
       <div class="col-md-12 p-2">
-        <div class="table-responsive">
-          <table class="table table-bordered table-hover table-sm bg-light" id="table">
+        <?php
+        require_once ("conexion/db.php");
+        require_once ("conexion/conexion.php");
+        $contador=mysqli_query($con,"select * from beneficiarios_vivienda");
+        $registros = mysqli_num_rows($contador);
+        echo "<p>Cantidad de Registros: ". $registros. "</p>";
+        ?>        
+        <div>
+
+          <table id="table">
             <thead class="bg-info text-white">
                 <tr>
-                  <th>Apellido</th>
-                  <th>Nombre</th>
-                  <th>Documento </th> 
-                  <th>Telefono </th>
-                  <th>Legajo existente N° </th>                 
-                  <th style="width: 2%"></th>
+                  <th width="100px">Fecha</th>
+                  <th width="100px">Documento </th> 
+                  <th width="200px">Apellido</th>
+                  <th width="200px">Nombre</th>
+                  <th width="100px">Telefono </th>
+                  <th width="100px">E-mail</th>
+                  <th width="100px">Legajo N° </th>
+                  <th width="300px">Familiares Declarados</th>                 
+                  <th width="100px" style="text-align: center">Ver</th>
                 </tr>
               </thead>
                   <?php
                   require_once ("conexion/db.php");
                   require_once ("conexion/conexion.php");
-                  $query_ped=mysqli_query($con,"select * from beneficiarios_vivienda");  
+                  $query_ped=mysqli_query($con,"select * from beneficiarios_vivienda order by fecha ASC");
                   while($rw=mysqli_fetch_array($query_ped)) {  
                   ?>                
               <tbody>
                 <tr>
+                    <td><?php echo $rw['fecha']; ?></td>
+                    <td><?php echo $rw['documento']; ?></td>
                     <td><?php echo $rw['apellido']; ?></td>
                     <td><?php echo $rw['nombre']; ?></td>
-                    <td><?php echo $rw['documento']; ?></td>
                     <td><?php echo $rw['telefono']; ?></td>
-                    <td><?php echo $rw['legajo']; ?></td>
+                    <td><?php echo $rw['mail']; ?></td>
+                    <td><?php echo $rw['legajo']; ?></td>                    
+                    
+                    <?php
+                    $documento = $rw['documento'];
+                    $query = mysqli_query($con,"select * from familiares_vivienda where documento_solicitante='$documento'");
+                    $filas = mysqli_num_rows($query);                 
+                    if ($filas > 0) {
+                      echo "<td style='background-color: #20a27e; color: white'>Tiene familiares declarados</td>";
+                    }
+                    else{
+                      echo "<td style='background-color: #a72b37; color: white'>No tiene familiares declarados </td>";
+                    } 
+                    ?>
+
                     <td>
-                      <a class="btn btn-primary btn-small btn-sm" href="verficha.php?id=<?php echo $rw['documento']; ?>" title="Ver ficha completa"><i class="fa fa-eye"></i></a>
+                      <a href="verficha.php?id=<?php echo $rw['documento']; ?>" title="Ver ficha completa"> Ver ficha</a>
                     </td>
                     <!--<td>
                       <a class="btn btn-danger btn-small btn-sm" href="procesos/borrar.php?id=<?php echo $rw['id_comercio']; ?>" onclick="return confirm('Pulce ACEPTAR para confirmar la eliminacion o CANCELAR la eliminacion');" title="Eliminar"><i class="fa fa-trash"></i></a>

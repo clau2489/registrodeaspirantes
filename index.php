@@ -12,26 +12,18 @@
   }
 </style>
 
-<?php include("layout/nav.php"); ?>
+<!--<?php include("layout/nav.php"); ?> -->
 
 <body id="page-top">
 
-  <!-- Header 
   <header class="masthead d-flex">
     <div class="container text-center my-auto">
-      <img src="assets/img/mmpverde.png" width="300px">
-      <h1 class="mb-1">Compro en mi Pueblo</h1>
-      <h3 class="mb-5">
-        <em style="color: white;">Una forma diferente de comprar</em>
-      </h3>
-      <a class="btn btn-success btn-sm js-scroll-trigger" href="#about">Accedé al programa</a>
+      <img src="assets/img/logo.png" width="300px">
+      <br>
+      <a class="btn btn-success btn-sm js-scroll-trigger mt-4" href="#about">Accedé al programa</a>
     </div>
     <div class="overlay"></div>
   </header>
-  
-  <div class="row-fluid bg-black">
-    <a href="administrator" style="color: white; padding-left: 20px"><i class="fa fa-sign-in" style="color: white"></i> Acceso a usuarios Registrados</a>
-  </div>  --> 
 
   <!-- About -->
   <section class="content-section" id="about">
@@ -40,6 +32,10 @@
         <div class="offset-md-2 col-md-8 p2" style="background-color: white">
           <div class="text-center mb-5">
             <img src="assets/img/mmpverde.png" width="300px">
+            <br>
+            <br>
+            <hr>
+            <img src="assets/img/logo.png" width="300px">
           </div>          
           <div class="text-center">
             <h2>Registro Único de Aspirantes a Programas Habitacionales del Municipio de Marcos Paz</h2>
@@ -55,7 +51,7 @@
           <div style="font-size: 11px">
             <div class="alert alert-warning">
               <h6>Términos y condiciones:</h6> 
-              <h6> La presente solicitud de pre-inscripcion al Registro Unico de Aspirantes Programas Habitacionales del Municipio de Marcos Paz, se encuentra normada por los requisitos solicitados en la Ordenanzas Municipales N°18/2004 y N°90/2014.-</h6>
+              <h6> La presente solicitud de pre-inscripción al Registro Único de Aspirantes Programas Habitacionales del Municipio de Marcos Paz, se encuentra normada por los requisitos solicitados en la Ordenanzas Municipales N°18/2004 y N°90/2014.-</h6>
               <hr>
               <h6>Descargar Ordenanzas Municipales desde aquí:</h6> 
               <a href="18-2004.pdf" target="_blank" class="bolder" style="font-size: 14px"><i class="fa fa-file-pdf-o"></i> Ordenanza Municipal N° 18/2004 </a>
@@ -66,7 +62,7 @@
             
             <h4>Los solicitantes deberán:</h4>  
             <div class="alert alert-success">
-              <h6>No ser propietarios ni titular de documentos q acrediten titularidad de ningún inmueble</h6>           
+              <h6>No ser propietarios ni titular de documentos que acrediten titularidad de ningún inmueble</h6>           
             </div>
             <div class="alert alert-success">
               <h6> No ser ni haber sido adjudicatarios de unidades Habitacionales de programas oficiales de tierras o viviendas, salvo que su renuncia a ese beneficio este debidamente fundada.</h6>
@@ -75,7 +71,7 @@
               <h6> Tener domicilio en el distrito y haber residido en el en forma ininterrumpida los 5 últimos años</h6>           
             </div>
             <div class="alert alert-success">
-              <h6> Permitir que personal municpal visite el domicilio declarado en el presente formulario para constatar la veracidad de los datos declarados</h6>           
+              <h6> Permitir que personal municIpal visite el domicilio declarado en el presente formulario para constatar la veracidad de los datos declarados</h6>           
             </div>
             <hr>
 
@@ -92,7 +88,7 @@
               
               <div class="alert alert-info">
                 <p>Tilde esta opción si ya completó un formulario con anterioridad</p>
-                <h4><input type="checkbox" name="no" id="no" onchange="javascript:showlegajo()"/> He realizado una inscripcion con anterioridad</h4>
+                <h4><input type="checkbox" name="no" id="no" onchange="javascript:showlegajo()"/> He realizado una inscripción con anterioridad</h4>
                 <br>                               
                 <div class="form-group" id="legajo" style="display: none;">
                   <label>Por favor indique su Número de Legajo </label>
@@ -196,7 +192,7 @@
               <hr>
               <div id="datosdecontacto">
                 <br>
-                <h4>Situacion Social:</h4>
+                <h4>Situación Social:</h4>
                 <br>                                          
                 <div class="form-group">
                   <label>Ocupación</label>

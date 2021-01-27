@@ -12,15 +12,14 @@
   }
 </style>
 
-<?php include("layout/nav.php"); ?>
+<!--<?php include("layout/nav.php"); ?> -->
 
 <body id="page-top">
 
-  <!-- Header 
+
   <header class="masthead d-flex">
     <div class="container text-center my-auto">
-      <img src="assets/img/mmpverde.png" width="300px">
-      <h1 class="mb-1">Compro en mi Pueblo</h1>
+      <img src="assets/img/logo.png" width="300px">
       <h3 class="mb-5">
         <em style="color: white;">Una forma diferente de comprar</em>
       </h3>
@@ -29,10 +28,7 @@
     <div class="overlay"></div>
   </header>
   
-  <div class="row-fluid bg-black">
-    <a href="administrator" style="color: white; padding-left: 20px"><i class="fa fa-sign-in" style="color: white"></i> Acceso a usuarios Registrados</a>
-  </div>  --> 
-
+ 
 
   <!-- About -->
   <section class="content-section" id="about">
@@ -41,7 +37,11 @@
       <div class="row"> 
         <div class="offset-md-2 col-md-8" style="background-color: white">          
           <div class="text-center mb-5">
-            <img src="assets/img/mmpverde.png" width="250px">
+            <img src="assets/img/mmpverde.png" width="300px">
+            <br>
+            <br>
+            <hr>
+            <img src="assets/img/logo.png" width="300px">
           </div>
           <div class="alert alert-primary">
             <h5>Usted está por finalizar su preinscripción al Registro Único de Aspirantes a Programas Habitacionales del Municipio de Marcos Paz. <br> Por favor, agregue personas a su grupo familiar según corresponda</h5>
