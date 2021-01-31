@@ -51,21 +51,20 @@ if (empty($_SESSION["usuario"])) {
         echo "<p>Cantidad de Registros: ". $registros. "</p>";
         ?>        
         <div>
-
-          <table id="table">
-            <thead class="bg-info text-white">
-                <tr>
+        <table class="table table-striped" id="table">
+          <thead class="bg-dark">
+				      <tr>
                   <th width="100px">Fecha</th>
-                  <th width="100px">Documento </th> 
-                  <th width="200px">Apellido</th>
-                  <th width="200px">Nombre</th>
-                  <th width="100px">Telefono </th>
-                  <th width="100px">E-mail</th>
-                  <th width="100px">Legajo N° </th>
-                  <th width="300px">Familiares Declarados</th>                 
-                  <th width="100px" style="text-align: center">Ver</th>
-                </tr>
-              </thead>
+                  <th>Documento </th> 
+                  <th>Apellido</th>
+                  <th>Nombre</th>
+                  <th>Telefono </th>
+                  <th width="100px">Familiares </th>                 
+                  <th width="100px">Ficha</th>
+                  <th style="text-align: center">Estado</th>
+                </tr>		  
+          </thead>
+
                   <?php
                   require_once ("conexion/db.php");
                   require_once ("conexion/conexion.php");
@@ -78,28 +77,33 @@ if (empty($_SESSION["usuario"])) {
                     <td><?php echo $rw['documento']; ?></td>
                     <td><?php echo $rw['apellido']; ?></td>
                     <td><?php echo $rw['nombre']; ?></td>
-                    <td><?php echo $rw['telefono']; ?></td>
-                    <td><?php echo $rw['mail']; ?></td>
-                    <td><?php echo $rw['legajo']; ?></td>                    
-                    
+                    <td><?php echo $rw['telefono']; ?></td>                   
                     <?php
                     $documento = $rw['documento'];
                     $query = mysqli_query($con,"select * from familiares_vivienda where documento_solicitante='$documento'");
                     $filas = mysqli_num_rows($query);                 
                     if ($filas > 0) {
-                      echo "<td style='background-color: #20a27e; color: white'>Tiene familiares declarados</td>";
+                      echo "<td style='background-color: #20a27e; color: white'>C/ Familiares</td>";
                     }
                     else{
-                      echo "<td style='background-color: #a72b37; color: white'>No tiene familiares declarados </td>";
+                      echo "<td style='background-color: #a72b37; color: white'>S/ Familiares </td>";
                     } 
                     ?>
-
+                    <?php
+                    $documento = $rw['documento'];
+                    $query_estado = mysqli_query($con,"select * from beneficiarios_vivienda where documento='$documento'");
+                    $estado = mysqli_fetch_array($query_estado);                 
+                    if ($estado['estado'] === NULL) {
+                      echo "<td style='background-color: #20a27e; color: white'>Sin Revisar</td>";
+                    }
+                    else{
+                      echo "<td style='background-color: #a72b37; color: white'>Revisado </td>";
+                    } 
+                    ?>
                     <td>
-                      <a href="verficha.php?id=<?php echo $rw['documento']; ?>" title="Ver ficha completa"> Ver ficha</a>
-                    </td>
-                    <!--<td>
-                      <a class="btn btn-danger btn-small btn-sm" href="procesos/borrar.php?id=<?php echo $rw['id_comercio']; ?>" onclick="return confirm('Pulce ACEPTAR para confirmar la eliminacion o CANCELAR la eliminacion');" title="Eliminar"><i class="fa fa-trash"></i></a>
-                    </td>-->                      
+                      <a href="procesos/cambiar.php?id=<?php echo $rw['id']; ?>" title="Cambiar a REVISADO"><i class="fa fa-plus"></i></a>
+                      <a href="verficha.php?id=<?php echo $rw['documento']; ?>" title="Ver ficha completa"><i class="fa fa-eye"></i></a>
+                    </td>                      
                   <?php
                   }
                   ?>

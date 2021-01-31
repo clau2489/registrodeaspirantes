@@ -20,9 +20,10 @@
   <header class="masthead d-flex">
     <div class="container text-center my-auto">
       <img src="assets/img/logo.png" width="300px">
-      <h3 class="mb-5">
+      <!--<h3 class="mb-5">
         <em style="color: white;">Una forma diferente de comprar</em>
-      </h3>
+      </h3> -->
+      <br>
       <a class="btn btn-success btn-sm js-scroll-trigger" href="#about">Accedé al programa</a>
     </div>
     <div class="overlay"></div>
@@ -47,7 +48,7 @@
             <h5>Usted está por finalizar su preinscripción al Registro Único de Aspirantes a Programas Habitacionales del Municipio de Marcos Paz. <br> Por favor, agregue personas a su grupo familiar según corresponda</h5>
           </div>
           <div class="text">
-
+            <h5>Datos del aspirante: </h5>
             <?php
             $documento = $_GET['id'];
             include("config/db.php");
@@ -105,7 +106,6 @@
                     <p class="card-text" style="padding: 0px; line-height: 2px;">DNI N°: <?php echo $rw['documento']; ?></p>
                     <p class="card-text" style="padding: 0px; line-height: 2px;">Fecha de Nacimiento :<?php echo $rw['fechadenacimiento']; ?></p>
                     <p class="card-text" style="padding: 0px; line-height: 2px;">Edad: <?php echo $rw['edad']; ?> años</p>
-                    <a href="#" class="card-link" style="color: red">Eliminar</a>
                   </div>
                 </div>
                   <?php
