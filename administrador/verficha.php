@@ -32,7 +32,7 @@ if (empty($_SESSION["usuario"])) {
         <div class="offset-md-2 col-md-8 tarjeta">
           <div class="text">
 
-            <h4>Datos del Beneficiario: <a href="home.php" style="float: right;"> Volver</a></h4>
+            <h4>Datos del Aspirante: <a href="home.php" style="float: right;"> Volver</a></h4>
 
             <?php
             $documento = $_GET['id'];

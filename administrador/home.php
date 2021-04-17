@@ -60,8 +60,9 @@ if (empty($_SESSION["usuario"])) {
                   <th>Nombre</th>
                   <th>Telefono </th>
                   <th width="100px">Familiares </th>                 
-                  <th width="100px">Ficha</th>
-                  <th style="text-align: center">Estado</th>
+                  <th width="100px">Estado</th>
+                  <th width="20px"></th>
+                  <th width="20px"></th>
                 </tr>		  
           </thead>
 
@@ -94,16 +95,18 @@ if (empty($_SESSION["usuario"])) {
                     $query_estado = mysqli_query($con,"select * from beneficiarios_vivienda where documento='$documento'");
                     $estado = mysqli_fetch_array($query_estado);                 
                     if ($estado['estado'] === NULL) {
-                      echo "<td style='background-color: #20a27e; color: white'>Sin Revisar</td>";
+                      echo "<td style='background-color: #a72b37; color: white'>No Leída</td>";
                     }
                     else{
-                      echo "<td style='background-color: #a72b37; color: white'>Revisado </td>";
+                      echo "<td style='background-color: #20a27e; color: white'>Leída </td>";
                     } 
                     ?>
                     <td>
-                      <a href="procesos/cambiar.php?id=<?php echo $rw['id']; ?>" title="Cambiar a REVISADO"><i class="fa fa-plus"></i></a>
-                      <a href="verficha.php?id=<?php echo $rw['documento']; ?>" title="Ver ficha completa"><i class="fa fa-eye"></i></a>
-                    </td>                      
+                      <a href="verficha.php?id=<?php echo $rw['documento']; ?>" title="Ver ficha completa"><i class="fa fa-search-plus"></i></a>
+                    </td>
+                    <td>
+                      <a href="procesos/cambiar.php?id=<?php echo $rw['id']; ?>" title="Cambiar a Ficha Leída"><i class="fa fa-exchange"></i></a>
+                    </td>                                          
                   <?php
                   }
                   ?>
